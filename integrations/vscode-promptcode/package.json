@@ -1,0 +1,35 @@
+{
+  "name": "promptcode-vscode",
+  "displayName": "PromptCode",
+  "description": "Draft prompts from editor selections and open PromptCode without uploading source code.",
+  "version": "0.1.0",
+  "publisher": "promptcode-local",
+  "license": "UNLICENSED",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Other", "Snippets"],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:promptcode.open",
+    "onCommand:promptcode.draftFromSelection",
+    "onCommand:promptcode.insertDsaTemplate"
+  ],
+  "contributes": {
+    "commands": [
+      { "command": "promptcode.open", "title": "PromptCode: Open PromptCode" },
+      { "command": "promptcode.draftFromSelection", "title": "PromptCode: Draft Prompt from Selection" },
+      { "command": "promptcode.insertDsaTemplate", "title": "PromptCode: Insert DSA Prompt Template" }
+    ],
+    "configuration": {
+      "title": "PromptCode",
+      "properties": {
+        "promptcode.url": {
+          "type": "string",
+          "default": "http://localhost:3000",
+          "description": "PromptCode web app address. Only this URL is opened; editor text is never sent by the extension."
+        }
+      }
+    }
+  }
+}

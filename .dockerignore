@@ -1,0 +1,10 @@
+.git
+.env*
+!.env.docker.example
+node_modules
+dist
+coverage
+.codex
+.agents
+.aws
+*.log

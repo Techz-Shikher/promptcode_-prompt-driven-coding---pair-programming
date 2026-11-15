@@ -1,0 +1,6 @@
+{
+  "name": "PromptCode: Prompt-Driven Coding & Pair Programming",
+  "description": "Prompt-driven coding workspace with curated DSA exercises, an interactive editor, transparent prompt-quality estimates, and Gemini-backed assistance when configured. Code execution, accounts, and collaboration are not connected yet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

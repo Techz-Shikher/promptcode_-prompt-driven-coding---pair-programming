@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --font-script: 'Caveat', cursive, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #070a13;
+    color: #e2e8f0;
+  }
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Glowing card borders & backdrops */
+.glow-card {
+  background: rgba(12, 16, 29, 0.92);
+  border: 1px solid rgba(34, 46, 75, 0.85);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.25);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.3);
+}
+
+/* Custom scrollbar for dense code editor & steps */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Code editor line wrapping and typography */
+.code-editor-font {
+  font-family: var(--font-mono);
+  font-feature-settings: "liga" 0;
+  tab-size: 2;
+}
+
+/* Pulse animation for peer cursor */
+@keyframes peer-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.peer-cursor-pulse {
+  animation: peer-blink 1.2s infinite;
+}
